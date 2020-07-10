@@ -8,13 +8,15 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 const createUser = () => {
-    let credentials = {}
-    //let roleField = document.getElementById("role").value;
-    let usernameField = document.getElementById("username").value;
-    let passwordField = document.getElementById("userpassword").value;
+    //let roleField = document.getElementById("role");
+    let usernameField = document.getElementById("username");
+    let passwordField = document.getElementById("userpassword");
 
-    credentials['username'] = usernameField;
-    credentials['password'] = passwordField;
+    if (usernameField.value != "" && passwordField.value != "") {
+    let credentials = {}
+
+    credentials['username'] = usernameField.value;
+    credentials['password'] = passwordField.value;
 
     fetch(`${URL}/users/sign-up`, {
         method: 'POST',
@@ -27,4 +29,8 @@ const createUser = () => {
         alert("Success");
         window.location.href = "http://localhost:8081/login.html";
     });
+}else{
+    usernameField.setAttribute("background-color", "red");
+    passwordField.setAttribute("background-color", "red");
+}
 };
