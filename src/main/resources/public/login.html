@@ -10,13 +10,17 @@
     <title>Login</title>
 </head>
 <body>
+<h1>Login</h1>
     <form id="loginForm">
-        <label for="username">Name</label>
-        <input type="text" name="name" id="username" required>
-        <label for="userpassword">Password</label>
-        <input type="password" name="password" id="userpassword" required>
+     <!--    <label for="roleL">Role</label>
+        <input type="text" name="role" id="roleL" required>-->
+        <label for="usernameL">Name</label>
+        <input type="text" name="name" id="usernameL" required>
+        <label for="userpasswordL">Password</label>
+        <input type="password" name="password" id="userpasswordL" required>
         <input type="button" value="Login" id="loginButton" />
-        <input type="button" value="Register" id="signupButton"/>
+        <label type="text" name ="tries" id="tries" >Wrong tries:</label>
     </form>
+    <button value="registerfirst" onclick="window.location.href='register.html'">I don't have an Account</button>
 </body>
 </html>

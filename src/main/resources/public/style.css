@@ -1,7 +1,16 @@
+html{
+    background-color: lightblue;
+    color: indigo;
+}
 input {
     display: block;
     width: 20rem;
     box-sizing: border-box;
+    background-color: whitesmoke;
+    color: indigo;
+    border-radius: 1px;
+    padding: 1px;
+    margin: 1px;
 }
 
 input[type='submit'], table {
