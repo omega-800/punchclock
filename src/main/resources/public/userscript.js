@@ -66,22 +66,6 @@ const resetForm = () => {
     currentuser = null;
 }
 
-const saveForm = (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
-    const user = {};
-    user['name'] = formData.get('nameU');
-    user['description'] = formData.get('descU');
-
-    if (mode === 'create') {
-        createuser(user);
-    } else {
-        user.id = currentuser.id;
-        updateuser(user);
-    }
-    resetForm();
-}
-
 const edituser = (user) => {
     mode = 'edit';
     currentuser = user;
@@ -122,7 +106,7 @@ const renderusers = () => {
         const row = document.createElement('tr');
         row.appendChild(createCell(user.id));
         row.appendChild(createCell(user.name));
-        row.appendChild(createCell(user.description));
+        row.appendChild(createCell(user.password));
         row.appendChild(createActions(user));
         display.appendChild(row);
     });
@@ -130,7 +114,44 @@ const renderusers = () => {
 
 document.addEventListener('DOMContentLoaded', function(){
     const userForm = document.querySelector('#userForm');
-    userForm.addEventListener('submit', saveForm);
+    userForm.addEventListener('submit', createUser);
     userForm.addEventListener('reset', resetForm);
     indexusers();
 });
+
+const createUser = (e) => {
+    //let roleField = document.getElementById("role");
+    e.preventDefault();
+    let usernameField =document.getElementById("nameU");
+    let passwordField =document.getElementById("passU");
+
+    if (usernameField.value != "" && passwordField.value != "") {
+
+        const user = {};
+    if (mode === 'create') {
+        const formData = new FormData(e.target);
+        user['username'] = formData.get('nameU');
+        user['password'] = formData.get('passU');
+
+
+        fetch(`${URL}/users/sign-up`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        }).then((result) => {
+            users.push(user);
+            alert("Success");
+            window.location.href = "http://localhost:8081/login.html";
+        });
+    } else{
+        user.id = currentuser.id;
+        updateuser(user);
+        }
+        resetForm();
+    }else{
+        usernameField.style.backgroundColor="tomato";
+        passwordField.style.backgroundColor="tomato";
+    }
+};

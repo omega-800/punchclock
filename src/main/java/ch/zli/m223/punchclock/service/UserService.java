@@ -1,5 +1,6 @@
 package ch.zli.m223.punchclock.service;
 
+import ch.zli.m223.punchclock.domain.Role;
 import ch.zli.m223.punchclock.domain.User;
 import ch.zli.m223.punchclock.repository.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -8,6 +9,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.Collections;
+import java.util.List;
 
 @Service
 public class UserService implements UserDetailsService {

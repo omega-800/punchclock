@@ -138,3 +138,7 @@ document.addEventListener('DOMContentLoaded', function(){
     entryForm.addEventListener('reset', resetForm);
     indexEntries();
 });
+
+document.getElementById("logout").addEventListener("click", function () {
+    localStorage.clear();
+});

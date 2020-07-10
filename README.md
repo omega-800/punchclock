@@ -3,6 +3,7 @@ Dies ist eine Beispielapplikation für das Modul M223.
 
 ##Infos über das Projekt
 Diese Applikation bietet eine Benutzerschnittstelle, die erlaubt, einen Benutzeraccount anzulegen und damit Arbeitszeiten für sein (auch hier eingeschriebenes) Projekt eintragen.
+Zum starten geht man auf http://localhost:8081/register.html
 
 ### Loslegen
 Folgende Schritte befolgen um loszulegen:
