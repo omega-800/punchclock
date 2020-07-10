@@ -1,16 +1,18 @@
 html{
     background-color: lightblue;
     color: indigo;
+    font-family: Arial, Helvetica, sans-serif;
 }
-input {
+input, button {
     display: block;
     width: 20rem;
     box-sizing: border-box;
     background-color: whitesmoke;
     color: indigo;
-    border-radius: 1px;
-    padding: 1px;
-    margin: 1px;
+    border-radius: 1em;
+    padding: 1em;
+    margin: 1em;
+    border: none;
 }
 
 input[type='submit'], table {

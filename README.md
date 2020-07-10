@@ -1,7 +1,10 @@
 # M223: Punchclock
 Dies ist eine Beispielapplikation für das Modul M223.
 
-## Loslegen
+##Infos über das Projekt
+Diese Applikation bietet eine Benutzerschnittstelle, die erlaubt, einen Benutzeraccount anzulegen und damit Arbeitszeiten für sein (auch hier eingeschriebenes) Projekt eintragen.
+
+### Loslegen
 Folgende Schritte befolgen um loszulegen:
 1. Sicherstellen, dass JDK 12 installiert und in der Umgebungsvariable `path` definiert ist.
 1. Ins Verzeichnis der Applikation wechseln und über die Kommandozeile mit `./gradlew bootRun` oder `./gradlew.bat bootRun` starten

@@ -30,7 +30,7 @@ const createUser = () => {
         window.location.href = "http://localhost:8081/login.html";
     });
 }else{
-    usernameField.setAttribute("background-color", "red");
-    passwordField.setAttribute("background-color", "red");
+    usernameField.style.backgroundColor="tomato";
+    passwordField.style.backgroundColor="tomato";
 }
 };

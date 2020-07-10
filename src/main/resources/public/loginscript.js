@@ -43,7 +43,7 @@ const loginUser = () => {
             document.getElementById("loginButton").setAttribute("disabled", "disabled")
         }
     }else{
-        usernameField.setAttribute("background-color", "red");
-        passwordField.setAttribute("background-color", "red");
+        usernameField.style.backgroundColor="tomato";
+        passwordField.style.backgroundColor="tomato";
     }
 }
