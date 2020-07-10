@@ -1,10 +1,17 @@
 package ch.zli.m223.punchclock.domain;
 
+import javax.persistence.*;
 import java.util.List;
 
+@Entity
 public class Project {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
+
+    @OneToMany
     private List<Entry> entries;
 
     public long getId() {

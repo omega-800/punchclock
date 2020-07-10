@@ -1,9 +1,15 @@
 package ch.zli.m223.punchclock.domain;
 
+import javax.persistence.*;
 import java.util.List;
 
+@Entity
 public class Role {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @OneToMany
     private List<User> users;
 
     public void setId(long id) {
@@ -31,3 +37,4 @@ public class Role {
     }
 
 }
+
