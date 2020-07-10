@@ -10,6 +10,7 @@ public class Project {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
+    private String description;
 
     @OneToMany
     private List<Entry> entries;
@@ -28,6 +29,14 @@ public class Project {
 
     public String getName() {
         return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public List<Entry> getEntries() {

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="projectscript.js" type="application/javascript"></script>
+</head>
+<body>
+<h1>Project</h1>
+<form id="projectForm">
+    <label for="nameP">Name</label>
+    <input type="text" name="nameP" id="nameP" required>
+    <label for="descP">Description</label>
+    <input type="text" name="descP" id="descP" required>
+    <input type="submit" value="Save" />
+    <input type="reset" value="Cancel" />
+</form>
+<button value="back" id="back" onclick="window.location.href='index.html'">Back</button>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody id="projectDisplay">
+    <tr>
+        <td colspan="4">Loading...</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

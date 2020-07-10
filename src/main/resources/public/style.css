@@ -9,10 +9,26 @@ input, button {
     box-sizing: border-box;
     background-color: whitesmoke;
     color: indigo;
-    border-radius: 1em;
+    border-radius: 0.5em;
     padding: 1em;
     margin: 1em;
     border: none;
+}
+
+button{
+    background-color: cornsilk;
+}
+
+input:hover, button:hover{
+    padding-bottom: 0.5em;
+    border-bottom: 0.5em solid indigo;
+}
+
+input:active, button:active{
+    padding-bottom: 0.5em;
+    border-bottom: 0.5em solid indigo;
+    padding-top: 0.5em;
+    border-top: 0.5em solid indigo;
 }
 
 input[type='submit'], table {
